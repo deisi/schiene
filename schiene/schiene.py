@@ -18,7 +18,7 @@ def parse_connections(html):
             'transfers': int(columns[2].contents[0]),
             'time': columns[2].contents[2],
             'products': columns[3].contents[0].split(', '),
-            'price': columns[3].contents[3].string.strip().replace(',', '.')
+            'price': '' #columns[3].contents[3].string.strip().replace(',', '.')
         }
 
         if data['price'] == "":
